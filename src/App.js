@@ -4,7 +4,7 @@ import "./css/App.css";
 import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
 import Favorites from "./components/Favorites";
-import API_KEY from "./config.js";
+
 
 class App extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   callWeatherData(city) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=059aed0a2a1fd44d11a12f54554248bf`;
     fetch(url)
       .then(handleErrors)
       .then(resp => resp.json())
